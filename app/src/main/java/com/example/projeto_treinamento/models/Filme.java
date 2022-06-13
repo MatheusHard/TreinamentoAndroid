@@ -1,6 +1,8 @@
 package com.example.projeto_treinamento.models;
 
-public class Filme {
+import java.io.Serializable;
+
+public class Filme implements Serializable {
     private String title;
     private String gender;
     private String year;

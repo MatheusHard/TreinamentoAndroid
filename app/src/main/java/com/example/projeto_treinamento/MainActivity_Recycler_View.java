@@ -5,7 +5,10 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
@@ -16,10 +19,11 @@ import com.example.projeto_treinamento.adapters.AdapterPrimeiro;
 import com.example.projeto_treinamento.adapters.recycler_on_click.RecyclerItemClickListener;
 import com.example.projeto_treinamento.models.Filme;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity_Recycler_View extends AppCompatActivity {
+public class MainActivity_Recycler_View extends AppCompatActivity{
 
     private RecyclerView recyclerViewPrimeiro;
     private List<Filme> list = new ArrayList<>();
@@ -46,6 +50,12 @@ public class MainActivity_Recycler_View extends AppCompatActivity {
                     @Override
                     public void onItemClick(View view, int position) {
                         Filme f = list.get(position);
+                        Intent i = new Intent(MainActivity_Recycler_View.this, MainActivityRecerDados.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("filme", f);
+                        i.putExtras(bundle);
+                        startActivity(i);
+
                         Toast.makeText(getApplicationContext(), "TESTES"+ f.getTitle(), Toast.LENGTH_LONG).show();
                     }
 
@@ -82,6 +92,9 @@ public class MainActivity_Recycler_View extends AppCompatActivity {
 
 
     }
+
+
+
 }
 
 

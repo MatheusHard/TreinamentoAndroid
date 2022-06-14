@@ -24,7 +24,6 @@ public class MainActivityRecerDados extends AppCompatActivity {
         textViewG = findViewById(R.id.textViewGenderR);
         textViewY = findViewById(R.id.textViewYearR);
 
-
         Filme f = (Filme) getIntent().getExtras().getSerializable("filme");
         textViewT.setText(f.getTitle());
         textViewG.setText(f.getGender());

@@ -51,9 +51,10 @@ public class MainActivity_Recycler_View extends AppCompatActivity{
                     public void onItemClick(View view, int position) {
                         Filme f = list.get(position);
                         Intent i = new Intent(MainActivity_Recycler_View.this, MainActivityRecerDados.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putSerializable("filme", f);
-                        i.putExtras(bundle);
+                        //Bundle bundle = new Bundle();
+                        //bundle.putSerializable("filme", f);
+                        //i.putExtras(bundle);
+                        i.putExtra("filme", f);
                         startActivity(i);
 
                         Toast.makeText(getApplicationContext(), "TESTES"+ f.getTitle(), Toast.LENGTH_LONG).show();

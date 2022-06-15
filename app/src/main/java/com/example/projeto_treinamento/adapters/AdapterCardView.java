@@ -11,16 +11,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projeto_treinamento.R;
 import com.example.projeto_treinamento.models.Filme;
+import com.example.projeto_treinamento.models.Postagem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterCardView extends RecyclerView.Adapter<AdapterCardView.MyViewHolder> {
-    private List<Filme> list;
-    //public AdapterCardView(List<Filme> list) {
-      //  this.list = list;
-    //}
-    public AdapterCardView(){
-
+    private List<Postagem> list = new ArrayList<>();;
+    public AdapterCardView(List<Postagem> list) {
+        this.list = list;
     }
 
     @NonNull
@@ -37,16 +36,15 @@ public class AdapterCardView extends RecyclerView.Adapter<AdapterCardView.MyView
     public void onBindViewHolder(@NonNull AdapterCardView.MyViewHolder holder, int position) {
         //Exibir os itens:
 
-        //Filme f = list.get(position);
-        //holder.titleCard.setText(f.getTitle());
-        holder.titleCard.setText("TITULO");
-        holder.subTitleCard.setText("TEXTO SUB_TITULO");
-        holder.imageViewCard.setImageResource(R.drawable.image_1);
+        Postagem p = list.get(position);
+        holder.titleCard.setText(p.getTitle());
+        holder.subTitleCard.setText(p.getSubTitle());
+        holder.imageViewCard.setImageResource(p.getImage());
     }
 
     @Override
     public int getItemCount() {
-        return 6;
+        return list.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{

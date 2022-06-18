@@ -10,21 +10,43 @@
         android:id="@+id/buttonRecycler"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="273dp"
+        android:layout_marginBottom="35dp"
         android:text="RecyclerViewNormal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCard"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.399" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="9dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="28dp"
         android:text="RecyclerView Card"
-        app:layout_constraintEnd_toEndOf="@+id/buttonRecycler"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSnack"
+        app:layout_constraintStart_toStartOf="@+id/buttonSnack"
         app:layout_constraintTop_toBottomOf="@+id/buttonRecycler" />
+
+    <Button
+        android:id="@+id/buttonSnack"
+        android:layout_width="198dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="259dp"
+        android:text="ButtonDrawer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCard" />
+
+    <Button
+        android:id="@+id/buttonDrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="21dp"
+        android:text="DrawerNavigation"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRecycler"
+        app:layout_constraintStart_toStartOf="@+id/buttonRecycler" />
 </androidx.constraintlayout.widget.ConstraintLayout>

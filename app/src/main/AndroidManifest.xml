@@ -24,7 +24,16 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="false"/>
+
+
+
+        <activity
+            android:name=".MainActivityNavigationDrawer"
+            android:exported="true"
+            android:label="@string/title_activity_main_navigation_drawer"
+            android:theme="@style/Theme.Projeto_Treinamento.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

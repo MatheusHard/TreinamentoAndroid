@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,7 +22,6 @@ public class ReclyclerCardFragment extends Fragment {
 
     private RecyclerView recyclerViewCard;
     private List<Postagem> list = new ArrayList<>();
-    private Button buttonReclyvler;
 
     public static ReclyclerCardFragment newInstance() {
         return new ReclyclerCardFragment();
@@ -51,7 +49,6 @@ public class ReclyclerCardFragment extends Fragment {
         recyclerViewCard.setLayoutManager(layoutManager);
         recyclerViewCard.setHasFixedSize(true);
         recyclerViewCard.setAdapter(adapterCardView);
-
 
         return view;
     }

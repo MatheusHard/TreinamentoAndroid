@@ -5,29 +5,24 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
+
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.projeto_treinamento.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
-
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.projeto_treinamento.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.projeto_treinamento.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
-        android:id="@+id/nav_rec"
+        android:id="@+id/nav_recycler_card"
         android:name="com.example.projeto_treinamento.ui.recycler_card.ReclyclerCardFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/menu_recycler_card"
         tools:layout="@layout/fragment_reclycler_card" />
+
+    <fragment
+        android:id="@+id/nav_recycler_view"
+        android:name="com.example.projeto_treinamento.ui.recycler_view.RecyclerViewFragment"
+        android:label="@string/menu_recycler_view"
+        tools:layout="@layout/activity_main_recycler_view_card" />
+
 
 
 </navigation>

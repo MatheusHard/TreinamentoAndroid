@@ -9,17 +9,13 @@
             android:icon="@drawable/ic_home_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_recycler_card"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="@string/menu_recycler_card" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_recycler_view"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
-        <item
-            android:id="@+id/nav_rec"
-            android:icon="@drawable/ic_home_24"
-            android:title="Reclycler VIew" />
+            android:title="@string/menu_recycler_view" />
 
 
     </group>

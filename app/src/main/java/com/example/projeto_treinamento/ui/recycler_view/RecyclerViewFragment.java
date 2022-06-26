@@ -78,12 +78,12 @@ public class RecyclerViewFragment extends Fragment {
 
     public void criarFilmes(){
 
-        Filme f1 = new Filme("Rei LEao", "anime", "2000");
-        Filme f2 = new Filme("A Coisa", "ficcao", "2001");
-        Filme f3 = new Filme("Voltados Mortos Vivos", "terror", "1986");
-        Filme f4 = new Filme("Silent Hill", "terror", "1986");
-        Filme f5 = new Filme("Joe e as BAratas", "terror", "1986");
-        Filme f6 = new Filme("Tubarao", "terror", "1986");
+        Filme f1 = new Filme("Rei LEao", "anime", 2000);
+        Filme f2 = new Filme("A Coisa", "ficcao", 2001);
+        Filme f3 = new Filme("Voltados Mortos Vivos", "terror", 1986);
+        Filme f4 = new Filme("Silent Hill", "terror", 1986);
+        Filme f5 = new Filme("Joe e as BAratas", "terror", 1986);
+        Filme f6 = new Filme("Tubarao", "terror", 1986);
 
         this.list.add(f1);
         this.list.add(f2);

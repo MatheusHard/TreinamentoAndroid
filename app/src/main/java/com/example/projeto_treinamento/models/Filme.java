@@ -3,13 +3,15 @@ package com.example.projeto_treinamento.models;
 import java.io.Serializable;
 
 public class Filme implements Serializable {
+
+    private int id;
     private String title;
     private String gender;
-    private String year;
+    private int year;
 
     public Filme(){}
 
-    public Filme(String title, String gender, String year) {
+    public Filme(String title, String gender, int year) {
         this.title = title;
         this.gender = gender;
         this.year = year;
@@ -31,11 +33,19 @@ public class Filme implements Serializable {
         this.gender = gender;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(String year) {
+    public void setYear(int year) {
         this.year = year;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

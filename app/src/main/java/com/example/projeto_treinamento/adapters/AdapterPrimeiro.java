@@ -35,7 +35,7 @@ public class AdapterPrimeiro extends RecyclerView.Adapter<AdapterPrimeiro.MyView
 
         Filme f = list.get(position);
         holder.title.setText(f.getTitle());
-        holder.year.setText(f.getYear());
+        holder.year.setText(String.valueOf(f.getYear()));
         holder.gender.setText(f.getGender());
     }
 

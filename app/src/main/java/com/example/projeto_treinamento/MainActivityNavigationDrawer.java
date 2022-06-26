@@ -1,6 +1,7 @@
 package com.example.projeto_treinamento;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,17 +12,24 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.projeto_treinamento.databinding.ActivityMainNavigationDrawerBinding;
+import com.example.projeto_treinamento.db.dao.FilmeDAO;
+import com.example.projeto_treinamento.models.Filme;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
+
+import java.util.List;
 
 public class MainActivityNavigationDrawer extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainNavigationDrawerBinding binding;
+    FilmeDAO dao_filme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         binding = ActivityMainNavigationDrawerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -45,6 +53,14 @@ public class MainActivityNavigationDrawer extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main_activity_navigation_drawer);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+
+        /*TESTES DB*/
+        //DADOS DB:
+        dao_filme = new FilmeDAO(getApplicationContext());
+        this.carregarFilmes();
+        //Filme f = new Filme("HOME ARANHA", "Ficção", 2005);
+        //dao_filme.save(f);
     }
 
 
@@ -54,5 +70,25 @@ public class MainActivityNavigationDrawer extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main_activity_navigation_drawer);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    private void carregarFilmes() {
+
+        List<Filme> list;;
+
+        list = dao_filme.list();
+
+
+        if (list != null) {
+
+            for (Filme f: list) {
+
+                Log.i("**********","***");
+                Log.i("FILME - ID", String.valueOf(f.getId()));
+                Log.i("FILME - TITLE", String.valueOf(f.getTitle()));
+                Log.i("FILME - DESCRICAO", String.valueOf(f.getYear()));
+
+            }
+        }
     }
 }
